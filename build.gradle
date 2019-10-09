@@ -23,13 +23,14 @@ ext {
 }
 
 dependencies {
-    //    implementation 'org.springframework.boot:spring-boot-starter-security'
-    //    testImplementation 'org.springframework.security:spring-security-test'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
     compile 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // Hmac 관련
+    compile group: 'commons-codec', name: 'commons-codec', version: '1.11'
 }
 
 dependencyManagement {
